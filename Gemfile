@@ -39,4 +39,6 @@ gem 'unicorn'
 # To use debugger
 # gem 'debugger'
 
+gem 'omniauth-twitter'
+
 gem 'twitter'
