@@ -2,10 +2,18 @@
   
   <div id="left_colum">
     <% $client.home_timeline.each do |t| %>
-  
-      <p><%= t %></p>
     
-    <%end %>
+      <% if t.uris? %>
+  
+        <% t.uris.each do |u| %>
+        
+          <a href="<%= u.expanded_url %>"><%= u.expanded_url %></a><br>
+        
+        <% end %>
+        
+      <% end %>
+    
+    <% end %>
   </div>
   
   <div id="right_colum">

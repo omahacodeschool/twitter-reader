@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'pry-rails', :group => :development
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
