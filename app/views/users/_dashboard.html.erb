@@ -1,13 +1,13 @@
-<div id="container_dash">
+<div id="container_dash" class="clearfix">
   
-  <div id="left_colum">
+  <div id="left_column" class="box_fix">
     <% $client.home_timeline.each do |t| %>
     
       <% if t.uris? %>
   
         <% t.uris.each do |u| %>
         
-          <a href="<%= u.expanded_url %>"><%= u.expanded_url %></a><br>
+          <a href="<%= u.expanded_url %>"><%= u.expanded_url %></a><br><br>
         
         <% end %>
         
@@ -16,7 +16,9 @@
     <% end %>
   </div>
   
-  <div id="right_colum">
+  <div id="right_column">
+    
+    la
     
   </div>
   
