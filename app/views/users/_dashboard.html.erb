@@ -2,17 +2,17 @@
   
   <div id="left_column" class="box_fix">
     
-    <% links = Array.new %>
+    <% unless $tweet_links.nil? %>
     
-    <% $client.home_timeline.each do |t| %>
+      <% $tweet_links.each do |t| %>
     
-      <% if t.uris? %>
+        <% if t.uris? %>
   
-        <% t.uris.each do |u| %>
+          <% t.uris.each do |u| %>
         
-          <% links << u.expanded_url %>
+            <a class="links" href="<%= u.expanded_url %>"><%= u.expanded_url %></a><br><br>
         
-          <a class="links" href="<%= u.expanded_url %>"><%= u.expanded_url %></a><br><br>
+          <% end %>
         
         <% end %>
         
