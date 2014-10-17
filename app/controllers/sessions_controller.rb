@@ -14,8 +14,6 @@ class SessionsController < ApplicationController
     
     $tweet_links = client.home_timeline
     
-    binding.pry
-    
     redirect_to root_url, :notice => "Signed in!"
   end
 
