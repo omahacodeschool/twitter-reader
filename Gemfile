@@ -43,3 +43,6 @@ gem 'unicorn'
 gem 'omniauth-twitter'
 
 gem 'twitter'
+
+gem "ruby-readability", :require => 'readability'
+

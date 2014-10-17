@@ -1,13 +1,18 @@
-<div id="container_dash" class="clearfix">
+<div id="container_dash" class="clearfix box_fix">
   
   <div id="left_column" class="box_fix">
+    
+    <% links = Array.new %>
+    
     <% $client.home_timeline.each do |t| %>
     
       <% if t.uris? %>
   
         <% t.uris.each do |u| %>
         
-          <a href="<%= u.expanded_url %>"><%= u.expanded_url %></a><br><br>
+          <% links << u.expanded_url %>
+        
+          <a class="links" href="<%= u.expanded_url %>"><%= u.expanded_url %></a><br><br>
         
         <% end %>
         
@@ -18,7 +23,7 @@
   
   <div id="right_column">
     
-    la
+    <div id="token" hidden><%= ENV['READABILITY_API_TOKEN'] %></div>
     
   </div>
   
